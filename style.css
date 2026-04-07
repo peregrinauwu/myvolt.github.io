@@ -1,0 +1,73 @@
+:root {
+    --azul-oscuro: #1E3A8A;
+    --amarillo: #FBBF24;
+    --blanco: #FFFFFF;
+    --gris-frio: #F1F5F9; /* Gris suave para fondos */
+    --espaciado-seccion: 100px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Barlow', sans-serif; }
+
+body { background-color: var(--blanco); color: #334155; line-height: 1.8; scroll-behavior: smooth; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+
+/* Espaciado de Secciones */
+.section-spaced { padding: var(--espaciado-seccion) 0; }
+
+/* Fondos Alternativos */
+.bg-grey { background-color: var(--gris-frio); }
+.bg-blue { background: var(--azul-oscuro); }
+
+/* Navegación - MENÚ CENTRADO */
+header { background: var(--blanco); border-bottom: 1px solid #e2e8f0; padding: 20px 0; position: fixed; width: 100%; top: 0; z-index: 1000; }
+.nav-centered { display: flex; justify-content: space-between; align-items: center; max-width: 900px; /* Ancho reducido para centrar */ margin: 0 auto; padding: 0 20px; }
+.logo-container { display: flex; align-items: center; gap: 12px; }
+.logo-nav { height: 40px; }
+.logo-text { font-weight: 700; font-size: 1.5rem; color: var(--azul-oscuro); }
+nav ul { display: flex; list-style: none; gap: 30px; }
+nav ul li a { text-decoration: none; color: var(--azul-oscuro); font-weight: 600; transition: color 0.3s; }
+nav ul li a:hover { color: var(--amarillo); }
+
+/* Hero */
+.hero { padding: 180px 0 120px; background-color: var(--blanco); }
+.hero-flex { display: flex; align-items: center; justify-content: space-between; gap: 60px; }
+.tagline { color: var(--azul-oscuro); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 15px; }
+.hero-content h1 { font-size: 3.8rem; color: var(--azul-oscuro); margin-bottom: 20px; line-height: 1.1; }
+.hero-content p { font-size: 1.25rem; color: #64748b; margin-bottom: 40px; max-width: 500px; }
+.hero-img img { width: 100%; max-width: 450px; }
+
+.btn { background: var(--azul-oscuro); color: white; padding: 16px 35px; border-radius: 10px; text-decoration: none; font-weight: 700; display: inline-block; transition: all 0.3s; }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(30, 58, 138, 0.2); }
+
+/* Grid de Problema/Solución */
+.section-title { text-align: center; margin-bottom: 60px; font-size: 2.6rem; color: var(--azul-oscuro); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+.card { background: var(--blanco); padding: 50px; border-radius: 20px; text-align: center; transition: transform 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
+.card:hover { transform: translateY(-5px); }
+.card-icon { height: 70px; margin-bottom: 25px; }
+.card h3 { font-size: 1.7rem; margin-bottom: 15px; color: var(--azul-oscuro); }
+.highlight { border: 2px solid var(--amarillo); box-shadow: 0 10px 30px rgba(251, 191, 36, 0.1); }
+
+/* Tecnología (Sección Azul) */
+.text-white { color: white !important; }
+.tech-grid-main { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-top: 20px; text-align: center; }
+.tech-item h3 { color: var(--amarillo); font-size: 1.9rem; margin-bottom: 15px; }
+.tech-item p { font-size: 1.1rem; opacity: 0.9; }
+
+/* Equipo con ICONO */
+.team-container { text-align: center; }
+.team-header { display: flex; flex-direction: column; align-items: center; gap: 15px; margin-bottom: 20px; }
+.team-main-icon { height: 70px; width: auto; }
+.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; margin-top: 30px; }
+.member { background: var(--blanco); padding: 35px 20px; border-radius: 15px; border-bottom: 5px solid var(--azul-oscuro); box-shadow: 0 5px 10px rgba(0,0,0,0.02); }
+.member strong { font-size: 1.15rem; display: block; margin-bottom: 8px; }
+
+footer { text-align: center; padding: 50px; color: #94a3b8; border-top: 1px solid #f1f5f9; background: var(--blanco); }
+
+@media (max-width: 992px) {
+    .nav-centered { max-width: 100%; }
+    .hero-flex { flex-direction: column; text-align: center; gap: 50px; }
+    .grid, .tech-grid-main { grid-template-columns: 1fr; }
+    .hero-content h1 { font-size: 2.8rem; }
+}
