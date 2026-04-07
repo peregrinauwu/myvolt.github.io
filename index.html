@@ -19,21 +19,26 @@
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#proyecto">Proyecto</a></li>
                 <li><a href="#tecnologia">Tecnología</a></li>
+                <li><a href="#pagos">Costos</a></li>
                 <li><a href="#equipo">Equipo</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="inicio" class="hero">
-        <div class="container hero-flex">
-            <div class="hero-content">
+        <div class="container hero-split">
+            <div class="hero-text-side">
                 <p class="tagline">La manera más fácil de ahorro inteligente para tu hogar</p>
                 <h1>Optimización de energía basado en IA</h1>
-                <p>Convertimos el consumo fantasma en ahorro real mediante inteligencia artificial y monitoreo en tiempo real.</p>
+                <p class="hero-desc">Convertimos el consumo fantasma en ahorro real mediante inteligencia artificial y monitoreo en tiempo real.</p>
                 <a href="#proyecto" class="btn">Explorar Proyecto</a>
             </div>
-            <div class="hero-img">
-                <img src="logo-completo.png" alt="MyVolt Logo Completo">
+            <div class="hero-visual-side">
+                <div class="visual-wrapper">
+                    <img src="logo-completo.png" alt="MyVolt Logo" class="img-big">
+                    <img src="qr-code.png" alt="QR MyVolt" class="img-big">
+                </div>
+                <p class="qr-hint">Escanea para descargar la App</p>
             </div>
         </div>
     </section>
@@ -43,33 +48,59 @@
             <h2 class="section-title">El Problema y la Solución</h2>
             <div class="grid">
                 <div class="card">
-                    <img src="icono-equis.png" alt="Rayo" class="card-icon">
+                    <img src="icono-equis.png" alt="Problema" class="card-icon">
                     <h3>Consumo Ineficiente</h3>
-                    <p>En México, el sector residencial consume el 14.4% de la energía nacional. El "consumo fantasma" representa hasta un 			15% del desperdicio.</p>
-			<p>Muchos hogares no tienen acceso a información clara sobre su consumo de energía eléctrica o no le 			toman mucha importancia, lo que les impide ahorrar dinero en su consumo de energía. El recibo tradicional es ineficaz porque no detalla cómo se gasta la energía.</p>
+                    <p>En México, el sector residencial consume el 14.4% de la energía nacional. El "consumo fantasma" representa hasta un 15% del desperdicio.</p>
                 </div>
                 <div class="card highlight">
-                    <img src="icono-check.png" alt="Casa" class="card-icon">
+                    <img src="icono-check.png" alt="Solución" class="card-icon">
                     <h3>Nuestra Propuesta</h3>
                     <p>MyVolt utiliza IA y un dispositivo IoT para convertir tu recibo en un plan de ahorro medible, buscando reducir hasta un 20% tu gasto.</p>
-			<p>Desarrollamos una aplicación móvil inteligente que capacite a los usuarios para optimizar su consumo de energía eléctrica, resultando en una reducción demostrable en el costo de su recibo y una mayor conciencia sobre sus hábitos de gasto.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="tecnologia" class="bg-blue section-spaced">
-        <div class="container text-white">
+        <div class="container text-center">
             <h2 class="section-title text-white">Arquitectura Propuesta</h2>
             <div class="tech-grid-main">
                 <div class="tech-item">
                     <h3>Machine Learning</h3>
-                    <p>Implementación de Isolation Forest para anomalías y Prophet para pronóstico de consumo.</p>
+                    <p class="text-white">Implementación de Isolation Forest para anomalías y Prophet para pronóstico de consumo.</p>
                 </div>
                 <div class="tech-item">
                     <h3>Backend y Datos</h3>
-                    <p>Desarrollado con Java 17, FastAPI y PostgreSQL para una gestión de datos robusta.</p>
+                    <p class="text-white">Desarrollado con Java 17, FastAPI y PostgreSQL para una gestión de datos robusta.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pagos" class="section-spaced">
+        <div class="container flex-center">
+            <h2 class="section-title">Comienza tu Ahorro Inteligente</h2>
+            <div class="card highlight bundle-card">
+                <div class="bundle-header">
+                    <img src="icono-check.png" alt="Check" class="card-icon-small">
+                    <p class="tagline-yellow">Paquete Todo Incluido</p>
+                </div>
+                <h3>Kit MyVolt Pro + Acceso Premium</h3>
+                
+                <div class="bundle-list">
+                    <p>✅ <strong>Dispositivo IoT:</strong> Monitoreo en tiempo real.</p>
+                    <p>✅ <strong>Suscripción Premium:</strong> IA y predicción de consumo.</p>
+                    <p>✅ <strong>App Móvil:</strong> Gestión total desde tu celular.</p>
+                </div>
+
+                <div class="price-box">
+                    <span class="old-price">$1,500 MXN</span>
+                    <p class="new-price">$1,329 MXN</p>
+                    <small>($1,299 equipo + $30 primer mes de IA)</small>
+                </div>
+                
+                <div id="wallet_container"></div>
+                <p class="disclaimer">*Suscripción mensual de IA por $30 MXN.</p>
             </div>
         </div>
     </section>
@@ -77,7 +108,7 @@
     <section id="equipo" class="section-spaced bg-grey">
         <div class="container team-container">
             <div class="team-header">
-                <img src="icono-equipo.png" alt="Icono Equipo 5" class="team-main-icon">
+                <img src="icono-equipo.png" alt="Equipo" class="team-main-icon">
                 <h2 class="section-title">Integrantes del equipo</h2>
             </div>
             <div class="team-grid">
@@ -93,5 +124,12 @@
         <p>MyVolt 2026 | Ingeniería en Desarrollo de Software | Centro de Enseñanza Técnica Industrial</p>
     </footer>
 
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script>
+        const mp = new MercadoPago('TU_PUBLIC_KEY_AQUÍ', { locale: 'es-MX' });
+        mp.bricks().create("wallet", "wallet_container", {
+            initialization: { preferenceId: 'TU_PREFERENCE_ID_AQUÍ' },
+        });
+    </script>
 </body>
 </html>
