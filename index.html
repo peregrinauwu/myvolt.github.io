@@ -15,10 +15,18 @@
                 <img src="logo.png" alt="MyVolt" class="logo-nav">
                 <span class="logo-text">MyVolt</span>
             </div>
-            <ul>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul id="nav-list">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#proyecto">Proyecto</a></li>
                 <li><a href="#tecnologia">Tecnología</a></li>
+                <li><a href="#funciones">Funciones</a></li>
                 <li><a href="#pagos">Costos</a></li>
                 <li><a href="#equipo">Equipo</a></li>
                 <li><a href="politica-privacidad.html">Política de privacidad</a></li>
@@ -78,6 +86,60 @@
         </div>
     </section>
 
+    <section id="funciones" class="section-spaced bg-grey">
+        <div class="container">
+            <h2 class="section-title">Funciones del Ecosistema</h2>
+            
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h3 style="color: var(--azul-oscuro); font-size: 1.8rem; margin-bottom: 10px;">Funciones Gratuitas</h3>
+                <p style="color: #64748b;">Disponibles para fomentar la conciencia sobre el consumo energético.</p>
+            </div>
+
+            <div class="grid" style="margin-bottom: 80px;">
+                <div class="card">
+                    <h3>Monitoreo en Tiempo Real</h3>
+                    <p>Visualización instantánea del consumo eléctrico del electrodoméstico conectado al MyVolt Smart Plug.</p>
+                </div>
+                <div class="card">
+                    <h3>Control Remoto</h3>
+                    <p>Capacidad de encender y apagar el dispositivo de forma remota a través del relé integrado en el hardware.</p>
+                </div>
+                <div class="card">
+                    <h3>Historial y Gráficas</h3>
+                    <p>Acceso a datos históricos y visualizaciones amigables para entender el consumo por aparato.</p>
+                </div>
+                <div class="card">
+                    <h3>Gamificación</h3>
+                    <p>Retos y recompensas personalizadas para motivar la adquisición de hábitos sostenibles.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h3 style="color: var(--azul-oscuro); font-size: 1.8rem; margin-bottom: 10px;">Funciones Premium (IA)</h3>
+                <p style="color: #64748b;">Funcionalidades avanzadas impulsadas por nuestro módulo de Inteligencia Artificial.</p>
+            </div>
+
+            <div class="grid">
+                <div class="card highlight">
+                    <h3>Consumo Fantasma</h3>
+                    <p>Análisis inteligente para identificar el gasto de dispositivos conectados sin uso activo.</p>
+                </div>
+                <div class="card highlight">
+                    <h3>Diagnósticos Predictivos</h3>
+                    <p>Generación de reportes sobre el estado y comportamiento de tus electrodomésticos.</p>
+                </div>
+                <div class="card highlight">
+                    <h3>Mantenimiento</h3>
+                    <p>Alertas automáticas que sugieren mantenimiento preventivo antes de presentar fallas críticas.</p>
+                </div>
+                <div class="card highlight">
+                    <h3>Patrones Anómalos</h3>
+                    <p>Uso de machine learning para detectar picos de energía o comportamientos fuera de lo normal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="pagos" class="section-spaced">
         <div class="container flex-center">
             <h2 class="section-title">Comienza tu Ahorro Inteligente</h2>
@@ -89,9 +151,9 @@
                 <h3>Kit MyVolt Pro + Acceso Premium</h3>
                 
                 <div class="bundle-list">
-                    <p>✅ <strong>Dispositivo IoT:</strong> Monitoreo en tiempo real.</p>
-                    <p>✅ <strong>Suscripción Premium:</strong> Recomendaciones con Inteligencia artificial.</p>
-                    <p>✅ <strong>App Móvil:</strong> Gestión total desde tu celular.</p>
+                    <p><strong>Dispositivo IoT:</strong> Monitoreo en tiempo real.</p>
+                    <p><strong>Suscripción Premium:</strong> Recomendaciones con Inteligencia artificial.</p>
+                    <p><strong>App Móvil:</strong> Gestión total desde tu celular.</p>
                 </div>
 
                 <div class="price-box">
@@ -124,5 +186,25 @@
     <footer>
         <p>MyVolt 2026 | Ingeniería en Desarrollo de Software | Centro de Enseñanza Técnica Industrial</p>
     </footer>
+
+    <script>
+        /* seleccionamos el boton y la lista del menu */
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+        /* seleccionamos todos los enlaces dentro del menu */
+        const navLinks = navList.querySelectorAll('a');
+
+        /* abrir o cerrar al tocar el boton */
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+
+        /* cerrar el menu automaticamente al tocar un enlace */
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>

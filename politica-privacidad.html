@@ -52,7 +52,14 @@
                 <img src="logo.png" alt="MyVolt" class="logo-nav">
                 <span class="logo-text">MyVolt</span>
             </div>
-            <ul>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul id="nav-list">
                 <li><a href="index.html#inicio">Inicio</a></li>
                 <li><a href="index.html#proyecto">Proyecto</a></li>
                 <li><a href="index.html#tecnologia">Tecnología</a></li>
@@ -131,6 +138,24 @@
     <footer>
         <p>MyVolt 2026 | Ingeniería en Desarrollo de Software | Centro de Enseñanza Técnica Industrial</p>
     </footer>
+<script>
+        /* seleccionamos el boton y la lista del menu */
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+        /* seleccionamos todos los enlaces dentro del menu */
+        const navLinks = navList.querySelectorAll('a');
 
+        /* abrir o cerrar al tocar el boton */
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+
+        /* cerrar el menu automaticamente al tocar un enlace */
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
