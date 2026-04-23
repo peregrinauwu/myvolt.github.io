@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos y condiciones - MyVolt</title>
+
+    <link rel="icon" type="image/png" href="../../img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <style>
+        .legal-content h2 { color: var(--azul-oscuro); margin-top: 45px; margin-bottom: 20px; font-size: 1.8rem; }
+        .legal-content p, .legal-content ul { margin-bottom: 20px; color: #475569; font-size: 1.1rem; line-height: 1.8; }
+        .legal-content ul { margin-left: 25px; }
+        .legal-header { text-align: center; margin-bottom: 50px; }
+        .legal-meta { color: #94a3b8; font-size: 1rem; margin-bottom: 5px; font-weight: 600; }
+        .content-wrapper { max-width: 900px; margin: 0 auto; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="nav-centered">
+            <a href="../inicio.html#inicio" class="logo-container" style="text-decoration: none;">
+                <img src="../../img/logo.png" alt="MyVolt" class="logo-nav">
+                <span class="logo-text">MyVolt</span>
+            </a>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul id="nav-list">
+                <li><a href="../inicio.html#inicio">Inicio</a></li>
+                <li><a href="../inicio.html#dispositivo">Nuestro hardware</a></li>
+                <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+                <li><a href="consentimiento-datos.html">Consentimiento de datos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section-spaced bg-grey" style="padding-top: 160px;">
+        <div class="container legal-content content-wrapper">
+            
+            <div class="legal-header">
+                <h1 class="section-title" style="margin-bottom: 15px;">Términos y condiciones</h1>
+                <p class="legal-meta">Última actualización: 16 de abril de 2026</p>
+            </div>
+
+            <div style="background: white; padding: 50px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
+                
+                <h2>1. Contexto Académico e Institucional</h2>
+                <p>Este proyecto ha sido desarrollado como parte integral del proceso de titulación para la Ingeniería en Desarrollo de Software en el Centro de Enseñanza Técnica Industrial (CETI). Los algoritmos, diseños de hardware y arquitectura de software son propiedad intelectual de los autores con fines de demostración académica.</p>
+
+                <h2>2. Naturaleza del Proyecto y Uso del Hardware</h2>
+                <p>MyVolt es un ecosistema de hardware y software desarrollado con fines de investigación. El "MyVolt Smart Plug" es un prototipo funcional y <strong>no cuenta con certificaciones de seguridad eléctrica comercial (ej. NOM)</strong>. Su uso está estrictamente bajo la responsabilidad del usuario.</p>
+                <p>El Smart Plug está diseñado para uso exclusivo en interiores y para la medición de electrodomésticos comunes. El equipo de desarrollo no se hace responsable por daños físicos, eléctricos, cortocircuitos o pérdida de datos derivados de la instalación, uso indebido, variaciones extremas de la red pública o fallas técnicas del prototipo.</p>
+
+                <h2>3. Restricciones de Uso (Cargas Críticas)</h2>
+                <p>Queda estrictamente prohibido utilizar el prototipo con equipos médicos de soporte vital, maquinaria industrial, calentadores de alta potencia o cualquier dispositivo cuya desconexión accidental pueda generar un riesgo a la salud, integridad física o seguridad estructural.</p>
+
+                <h2>4. Deslinde de Responsabilidad con CFE</h2>
+                <p>MyVolt es una herramienta tecnológica privada e independiente. <strong>No tenemos ninguna afiliación, asociación ni vinculación oficial con la Comisión Federal de Electricidad (CFE)</strong>. Las métricas de consumo y las estimaciones de costo (MXN) mostradas en la aplicación son cálculos aproximados y no sustituyen ni tienen validez legal sobre la facturación oficial de su proveedor de energía.</p>
+
+                <h2>5. Limitación del Servicio de IA y Disponibilidad</h2>
+                <p>Al ser un proyecto en fase de validación (Fase Beta), no se garantiza la disponibilidad ininterrumpida de los servicios en la nube, la base de datos o la aplicación móvil. El sistema puede sufrir interrupciones por mantenimiento.</p>
+                <p>Las alertas y recomendaciones (seguridad, mantenimiento, ahorro) generadas por nuestra Inteligencia Artificial son de carácter netamente informativo y preventivo. <strong>En ningún caso sustituyen el diagnóstico de un técnico electricista profesional.</strong></p>
+
+                <h2>6. Pagos y Suscripciones</h2>
+                <p>El acceso a las funciones Premium requiere una suscripción mensual. Todos los cobros digitales se procesan exclusivamente a través de <strong>Google Play Billing</strong>. MyVolt no almacena información bancaria. Las cancelaciones deben gestionarse directamente desde la configuración de suscripciones de su cuenta de Google Play.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <p>MyVolt 2026 | Ingeniería en Desarrollo de Software | Centro de Enseñanza Técnica Industrial</p>
+    </footer>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+        const navLinks = navList.querySelectorAll('a');
+
+        mobileMenu.addEventListener('click', () => { navList.classList.toggle('active'); });
+        navLinks.forEach(link => { link.addEventListener('click', () => { navList.classList.remove('active'); }); });
+    </script>
+</body>
+</html>

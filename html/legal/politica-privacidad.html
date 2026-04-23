@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidad - MyVolt</title>
 
-    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="icon" type="image/png" href="../../img/logo.png">
 
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     
+    <link rel="stylesheet" href="../../css/style.css">
+
     <style>
         .legal-content h2 {
             color: var(--azul-oscuro);
@@ -51,8 +52,8 @@
 
     <header>
         <nav class="nav-centered">
-            <a href="index.html#inicio" class="logo-container" style="text-decoration: none;">
-                <img src="logo.png" alt="MyVolt" class="logo-nav">
+            <a href="../inicio.html#inicio" class="logo-container" style="text-decoration: none;">
+                <img src="../../img/logo.png" alt="MyVolt" class="logo-nav">
                 <span class="logo-text">MyVolt</span>
             </a>
             
@@ -63,13 +64,10 @@
             </div>
 
             <ul id="nav-list">
-                <li><a href="index.html#inicio">Inicio</a></li>
-                <li><a href="index.html#proyecto">Proyecto</a></li>
-                <li><a href="index.html#tecnologia">Tecnología</a></li>
-                <li><a href="index.html#dispositivo">Dispositivo</a></li>
-                <li><a href="index.html#pagos">Costos</a></li>
-                <li><a href="index.html#equipo">Equipo</a></li>
-                <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+                <li><a href="../inicio.html">Inicio</a></li>
+                <li><a href="../inicio.html#dispositivo">Nuestro hardware</a></li>
+                <li><a href="terminos-condiciones.html">Términos de servicio</a></li>
+                <li><a href="consentimiento-datos.html">Consentimiento de datos</a></li>
             </ul>
         </nav>
     </header>
@@ -84,15 +82,24 @@
             </div>
 
             <div style="background: white; padding: 50px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
-                <p>La presente Política de Privacidad establece los términos en que MyVolt usa y protege la información que es proporcionada por sus usuarios al momento de utilizar la aplicación móvil y el ecosistema de hardware asociado. Este documento ha sido redactado para cumplir con los estándares de transparencia de las tiendas de aplicaciones y con el marco legal de protección de datos personales.</p>
+                <p>La presente Política de Privacidad, elaborada en estricto apego a la <strong>Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)</strong>, establece los términos en que MyVolt usa y protege la información proporcionada por sus usuarios. Este documento cumple con los estándares de transparencia para el uso de nuestra aplicación móvil, los servicios de Inteligencia Artificial y el ecosistema de hardware IoT asociado.</p>
+
+                <p><strong>Aviso de Independencia:</strong> MyVolt es una herramienta tecnológica privada e independiente diseñada para el monitoreo energético del hogar. No tenemos afiliación, asociación ni vinculación oficial con la Comisión Federal de Electricidad (CFE) ni con ninguna otra entidad gubernamental proveedora de energía. Las métricas calculadas son estimaciones para el beneficio del usuario y no sustituyen la facturación oficial.</p>
 
                 <h2>1. Información Recopilada</h2>
                 <p>Para que MyVolt pueda realizar un análisis energético preciso y ofrecer funciones de predicción mediante inteligencia artificial, se requiere la recopilación de los siguientes datos:</p>
                 <ul>
                     <li><strong>Datos de Identificación y Perfil:</strong> Nombre del usuario.</li>
+                    <li><strong>Credenciales de Acceso:</strong> Dirección de correo electrónico y contraseña encriptada para gestionar la identidad y el inicio de sesión seguro.</li>
                     <li><strong>Información de la Vivienda:</strong> Código postal (para contextualizar tarifas y clima), número de habitantes en el domicilio y tipo de vivienda (casa o departamento).</li>
                     <li><strong>Métricas Eléctricas (Hardware):</strong> Lecturas en tiempo real de potencia (W), obtenidas a través de los sensores ESP32 (Smart Plugs).</li>
                     <li><strong>Datos de Conectividad:</strong> Información técnica de la red local para la comunicación mediante el protocolo MQTT y el establecimiento de conexiones seguras.</li>
+                    <li><strong>Permisos del Dispositivo (Android):</strong> 
+                        <ul>
+                            <li><em>Ubicación aproximada:</em> Requerida exclusivamente por el sistema operativo para escanear redes Wi-Fi locales y permitir el emparejamiento inicial del enchufe inteligente. No rastreamos la ubicación física del usuario en tiempo real.</li>
+                            <li><em>Notificaciones:</em> Para enviar alertas de mantenimiento preventivo, detección de picos de energía y reportes de IA.</li>
+                        </ul>
+                    </li>
                 </ul>
 
                 <h2>2. Uso y Finalidad de los Datos</h2>
@@ -100,6 +107,8 @@
                 <ul>
                     <li>Visualización de gráficas de consumo y gasto energético en tiempo real.</li>
                     <li>Entrenamiento de modelos de redes neuronales para la predicción de consumo y detección de anomalías. Es importante destacar que para estos procesos de IA, los datos son sometidos a procesos de anonimización, eliminando cualquier vínculo directo con la identidad del usuario.</li>
+                    <li><strong>Procesos en Segundo Plano:</strong> Para que el sistema de IA pueda advertir sobre consumos fantasmas o anomalías urgentes, la aplicación móvil y el servidor sincronizan datos del hardware IoT en segundo plano, incluso cuando la aplicación está cerrada.</li>
+                    <li><strong>Gestión de Suscripciones:</strong> El pago de las funciones Premium de IA se procesa íntegramente a través del sistema de facturación oficial de Google Play (Google Play Billing). MyVolt no recopila, procesa ni almacena números de tarjetas de crédito o débito.</li>
                 </ul>
 
                 <h2>3. Almacenamiento y Seguridad de la Información</h2>
@@ -116,8 +125,9 @@
                 <h2>5. Privacidad de Menores</h2>
                 <p>Nuestros servicios no están diseñados para menores de 13 años. No recopilamos deliberadamente información personal de niños. Si detectamos que se ha almacenado información de un menor sin el consentimiento de sus padres, procederemos a su eliminación inmediata de los registros locales.</p>
 
-                <h2>6. Retención de la Información</h2>
-                <p>Los datos se conservarán únicamente mientras la cuenta de usuario esté activa o sea necesario para proporcionar los servicios de análisis energético. Dado que el sistema opera en un servidor local, el usuario tiene la facultad de eliminar el historial de datos de forma definitiva en cualquier momento mediante las herramientas de gestión del sistema.</p>
+                <h2>6. Retención y Eliminación de la Información</h2>
+                <p>Los datos se conservarán únicamente mientras la cuenta de usuario esté activa. Dado que el sistema opera en un servidor local, priorizamos el control total del usuario sobre su huella digital.</p>
+                <p><strong>Eliminación de Cuenta y Datos:</strong> El usuario puede solicitar la eliminación definitiva de su cuenta, historial de consumo eléctrico y configuraciones de hardware en cualquier momento. Esto se puede realizar directamente desde el botón "Eliminar Cuenta" ubicado en la sección de Perfil/Configuración dentro de la aplicación móvil, o enviando una solicitud por escrito a nuestro correo de contacto. Al confirmar la acción, todos los registros asociados se purgarán de nuestro servidor local de forma irreversible.</p>
 
                 <h2>7. Derechos ARCO (Acceso, Rectificación, Cancelación y Oposición)</h2>
                 <p>Usted tiene derecho en todo momento a:</p>

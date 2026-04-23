@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consentimiento de Datos - MyVolt</title>
+
+    <link rel="icon" type="image/png" href="../../img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <style>
+        .legal-content h2 { color: var(--azul-oscuro); margin-top: 45px; margin-bottom: 20px; font-size: 1.8rem; }
+        .legal-content p { margin-bottom: 20px; color: #475569; font-size: 1.1rem; line-height: 1.8; }
+        .legal-header { text-align: center; margin-bottom: 50px; }
+        .content-wrapper { max-width: 900px; margin: 0 auto; }
+        .btn-accept { background: var(--azul-oscuro); color: white; padding: 16px 30px; border: none; border-radius: 10px; font-size: 1.1rem; cursor: pointer; display: block; width: 100%; font-weight: 700; margin-top: 40px; transition: all 0.3s;}
+        .btn-accept:hover { background: var(--amarillo); color: var(--azul-oscuro); transform: translateY(-2px);}
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="nav-centered">
+            <a href="../inicio.html#inicio" class="logo-container" style="text-decoration: none;">
+                <img src="../../img/logo.png" alt="MyVolt" class="logo-nav">
+                <span class="logo-text">MyVolt</span>
+            </a>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul id="nav-list">
+                <li><a href="../inicio.html#inicio">Inicio</a></li>
+                <li><a href="../inicio.html#dispositivo">Nuestro hardware</a></li>
+                <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+                <li><a href="terminos-condiciones.html">Términos de servicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section-spaced bg-grey" style="padding-top: 160px;">
+        <div class="container legal-content content-wrapper">
+            
+            <div class="legal-header">
+                <h1 class="section-title" style="margin-bottom: 15px;">Consentimiento para Modelos de IA</h1>
+            </div>
+
+            <div style="background: white; padding: 50px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
+                <h2>Uso de Datos para Machine Learning</h2>
+                <p>En MyVolt, la transparencia es nuestra prioridad. Para que nuestras redes neuronales (Isolation Forest) puedan alertarte sobre <strong>consumos fantasma y prever fallas en tus equipos con recomendaciones personalizadas</strong>, necesitamos procesar el historial de Watts que genera tu Smart Plug.</p>
+                
+                <p>Al otorgar tu consentimiento, autorizas que los datos de fluctuación eléctrica sean enviados y procesados en nuestro servidor local.</p>
+                
+                <p>1. <strong>Anonimización:</strong> Tus datos de consumo pasarán por un proceso de desvinculación de identidad (se separan de tu nombre y correo) antes de alimentar el algoritmo general.<br>
+                2. <strong>Actividad en Segundo Plano:</strong> La aplicación realizará procesos de sincronización en <em>background</em> para poder enviarte notificaciones push urgentes si detectamos un pico anómalo de energía, incluso cuando no estás usando activamente la app.<br>
+                3. <strong>Soberanía de Datos:</strong> La información reside en un entorno controlado y no se comercializa con agencias de publicidad de terceros.</p>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <p>MyVolt 2026 | Ingeniería en Desarrollo de Software | Centro de Enseñanza Técnica Industrial</p>
+    </footer>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+        const navLinks = navList.querySelectorAll('a');
+
+        mobileMenu.addEventListener('click', () => { navList.classList.toggle('active'); });
+        navLinks.forEach(link => { link.addEventListener('click', () => { navList.classList.remove('active'); }); });
+    </script>
+</body>
+</html>
