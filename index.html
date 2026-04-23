@@ -142,6 +142,49 @@
         </div>
     </section>
 
+    <section id="dispositivo" class="section-spaced">
+        <div class="container">
+            <h2 class="section-title">Conoce nuestro hardware</h2>
+            <div class="product-split">
+                
+                <div class="product-gallery">
+                    <div class="slides" id="slider-track">
+                        <div class="slide"><img src="Iot_frente.png" alt="Vista frontal MyVolt"></div>
+                        <div class="slide"><img src="Iot_lado.png" alt="Vista lateral MyVolt"></div>
+                        <div class="slide"><img src="IoT_atras.png" alt="Vista trasera MyVolt"></div>
+                        <div class="slide"><img src="IoT_conectado.png" alt="MyVolt conectado"></div>
+
+                    </div>
+                    <button class="slider-btn prev-btn" id="prev-slide">❮</button>
+                    <button class="slider-btn next-btn" id="next-slide">❯</button>
+                </div>
+                
+                <div class="product-info">
+                    <h3 style="font-size: 2rem; color: var(--azul-oscuro);">MyVolt Smart Plug</h3>
+                    <p class="product-price">$1,299 MXN</p>
+                    <p>Conecta este dispositivo entre tu electrodoméstico y la toma de corriente. Extrae métricas precisas y se comunica vía Wi-Fi con tu aplicación móvil para un monitoreo en tiempo real sin complicaciones.</p>
+                    
+                    <h4 style="margin-top: 30px; font-size: 1.2rem; color: var(--azul-oscuro);">Electrodomésticos compatibles:</h4>
+                    <ul class="device-list">
+                        <li>TV LED</li>
+                        <li>Microondas</li>
+                        <li>Refrigerador</li>
+                        <li>Cafetera</li>
+                        <li>Ventilador de Pedestal</li>
+                        <li>Calefactor Portátil</li>
+                        <li>Computadora (Escritorio)</li>
+                        <li>Consola de Videojuegos</li>
+                        <li>Laptop</li>
+                        <li>Licuadora</li>
+                        <li>Plancha de Ropa</li>
+                        <li>Secadora de Pelo</li>
+                        <li>Tostador de Pan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="pagos" class="section-spaced">
         <div class="container flex-center">
             <h2 class="section-title">Comienza tu Ahorro Inteligente</h2>
@@ -190,22 +233,44 @@
     </footer>
 
     <script>
-        /* seleccionamos el boton y la lista del menu */
+        /* menu de navegacion */
         const mobileMenu = document.getElementById('mobile-menu');
         const navList = document.getElementById('nav-list');
-        /* seleccionamos todos los enlaces dentro del menu */
+        
         const navLinks = navList.querySelectorAll('a');
 
-        /* abrir o cerrar al tocar el boton */
         mobileMenu.addEventListener('click', () => {
             navList.classList.toggle('active');
         });
 
-        /* cerrar el menu automaticamente al tocar un enlace */
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navList.classList.remove('active');
             });
+        });
+
+        /* carrusel del iot */
+        const track = document.getElementById('slider-track');
+        const btnPrev = document.getElementById('prev-slide');
+        const btnNext = document.getElementById('next-slide');
+        
+        let currentSlide = 0;
+        const totalSlides = 4;
+
+        btnNext.addEventListener('click', () => {
+            currentSlide++;
+            if(currentSlide >= totalSlides) {
+                currentSlide = 0;
+            }
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        });
+
+        btnPrev.addEventListener('click', () => {
+            currentSlide--;
+            if(currentSlide < 0) {
+                currentSlide = totalSlides - 1;
+            }
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
         });
     </script>
 </body>
