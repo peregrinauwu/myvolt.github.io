@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminación de Cuenta - MyVolt</title>
+
+    <link rel="icon" type="image/png" href="../../img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <style>
+        .legal-content h2 { color: var(--azul-oscuro); margin-top: 45px; margin-bottom: 20px; font-size: 1.8rem; }
+        .legal-content p, .legal-content ol, .legal-content ul { margin-bottom: 20px; color: #475569; font-size: 1.1rem; line-height: 1.8; }
+        .legal-content ul, .legal-content ol { margin-left: 25px; }
+        .legal-content li { margin-bottom: 12px; }
+        .legal-header { text-align: center; margin-bottom: 50px; }
+        .legal-meta { color: #94a3b8; font-size: 1rem; margin-bottom: 5px; font-weight: 600; }
+        .content-wrapper { max-width: 900px; margin: 0 auto; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="nav-centered">
+            <a href="../../index.html#inicio" class="logo-container" style="text-decoration: none;">
+                <img src="../../img/logo.png" alt="MyVolt" class="logo-nav">
+                <span class="logo-text">MyVolt</span>
+            </a>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul id="nav-list">
+                <li><a href="../inicio.html">Inicio</a></li>
+                <li><a href="../inicio.html#dispositivo">Nuestro hardware</a></li>
+                <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+                <li><a href="terminos-condiciones.html">Términos y condiciones</a></li>
+                <li><a href="consentimiento-datos.html">Consentimiento de datos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section-spaced bg-grey" style="padding-top: 160px;">
+        <div class="container legal-content content-wrapper">
+            
+            <div class="legal-header">
+                <h1 class="section-title" style="margin-bottom: 15px;">Pasos para eliminación de Cuenta</h1>
+                <p class="legal-meta">Gestión de datos de usuarios de MyVolt</p>
+            </div>
+
+            <div style="background: white; padding: 50px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
+                
+                <p>En MyVolt respetamos tu privacidad. Si deseas eliminar tu cuenta y todos los datos asociados de nuestra plataforma, sigue estos pasos:</p>
+
+                <h2>¿Cómo eliminar tu cuenta?</h2>
+                <ol>
+                    <li>Abre la aplicación móvil de <strong>MyVolt</strong>.</li>
+                    <li>Inicia sesión con tus credenciales.</li>
+                    <li>Dirígete a la sección de <strong>Perfil</strong>.</li>
+                    <li>Al entrar verás el botón <strong>Eliminar</strong>, presiona el botón.</li>
+                    <li><strong>Confirma</strong> tu decisión en la pantalla de advertencia.</li>
+                </ol>
+
+                <p style="background-color: var(--gris-frio); padding: 15px; border-radius: 10px; border-left: 4px solid var(--amarillo); margin-top: 25px;">
+                    <strong>Nota:</strong> Si ya no tienes la app instalada, puedes enviar un correo a <a href="mailto:myvoltceti@gmail.com" style="color: var(--azul-oscuro); font-weight: bold;">myvoltceti@gmail.com</a> desde el correo registrado en tu cuenta solicitando la baja.
+                </p>
+
+                <h2>¿Qué datos se borrarán?</h2>
+                <p>Al confirmar la eliminación, borraremos permanentemente de nuestro servidor local tu nombre, correo electrónico, contraseñas encriptadas, datos de ubicación (código postal) y todo el historial de consumo eléctrico de tus dispositivos IoT conectados (Smart Plug).</p>
+
+                <h2>Períodos de retención</h2>
+                <p>Si tienes pagos o suscripciones Premium de IA activas registradas mediante Google Play, conservaremos el registro del ID de pago durante un período de 1 a 2 años estrictamente por cuestiones de cumplimiento fiscal y auditoría. Estos datos se conservarán desvinculados de tu información personal.</p>
+                
+                <div style="margin-top: 50px; padding-top: 3px; text-align: center;">
+                    <a href="../legal/politica-privacidad.html" class="btn" style="background: #1E3A8A;">Volver a la política de privacidad</a>
+                </div>
+            </div>
+        </div>
+
+                        
+    </section>
+
+    <footer>
+        <p>MyVolt 2026 | Ingeniería en Desarrollo de Software | Centro de Enseñanza Técnica Industrial</p>
+    </footer>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+        const navLinks = navList.querySelectorAll('a');
+
+        mobileMenu.addEventListener('click', () => { navList.classList.toggle('active'); });
+        navLinks.forEach(link => { link.addEventListener('click', () => { navList.classList.remove('active'); }); });
+    </script>
+</body>
+</html>
