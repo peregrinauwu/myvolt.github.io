@@ -84,7 +84,7 @@ nav ul li a:hover { color: var(--amarillo); }
 .prev-btn { left: 15px; }
 .next-btn { right: 15px; }
 
-/* informacion y lista de electrodésticos en 4 columnas */
+/* informacion y lista de electrodomésticos en 4 columnas */
 .product-info { flex: 1; text-align: left; }
 .product-price { font-size: 2.5rem; color: var(--azul-oscuro); font-weight: 700; margin: 15px 0; }
 
